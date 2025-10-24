@@ -6,8 +6,6 @@ A fun and interactive word-guessing game inspired by Wordle and Lingo! Built wit
 
 **Play the game here:** [https://astabile-react-wordle.netlify.app/](https://astabile-react-wordle.netlify.app/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/YOUR_SITE_ID/deploy-status)](https://app.netlify.com/sites/astabile-react-wordle/deploys)
-
 ## ✨ Features
 
 - **Interactive Gameplay**: Type letters directly on your keyboard to make guesses
