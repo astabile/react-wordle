@@ -1,17 +1,14 @@
 import { useState, useEffect } from 'react';
 import Wordle from './components/Wordle';
+import data from './data/db.json';
 
 function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3004/solutions')
-      .then(res => res.json())
-      .then(json => {
-        // get a random solution from the array
-        const randomSolution = json[Math.floor(Math.random() * json.length)];
-        setSolution(randomSolution.word);
-      });
+    // get a random solution from the array
+    const randomSolution = data.solutions[Math.floor(Math.random() * data.solutions.length)];
+    setSolution(randomSolution.word);
   }, [setSolution]);
 
   return (
