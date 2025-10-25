@@ -23,12 +23,16 @@ export default function Wordle({ solution }) {
         return () => window.removeEventListener('keyup', handleKeyup);
     }, [handleKeyup, isCorrect, turn]);
 
+    const handleClick = (key) => {
+        handleKeyup({ key });
+    };
+
     return (
         <div>
             <div>solution: {solution}</div>
             <div>currentGuess: {currentGuess}</div>
             <Grid guesses={guesses} currentGuess={currentGuess} turn={turn} />
-            <Keypad usedKeys={usedKeys} />
+            <Keypad usedKeys={usedKeys} handleClick={handleClick} />
             {showModal && <Modal isCorrect={isCorrect} turn={turn} solution={solution} />}
         </div>);
 }

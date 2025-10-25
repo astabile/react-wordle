@@ -84,6 +84,19 @@ h1 {
   display: inline-block;
   border-radius: 6px;
   line-height: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.keypad>div:hover {
+  background: #ddd;
+  transform: scale(1.05);
+}
+
+.keypad>div.special-key {
+  width: 60px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .keypad>div.green {
@@ -92,16 +105,28 @@ h1 {
   transition: all 0.3s ease-in;
 }
 
+.keypad>div.green:hover {
+  background: #4ab84a;
+}
+
 .keypad>div.yellow {
   background: #e2cc68;
   color: #fff;
   transition: all 0.3s ease-in;
 }
 
+.keypad>div.yellow:hover {
+  background: #d4be5a;
+}
+
 .keypad>div.grey {
   background: #a1a1a1;
   color: #fff;
   transition: all 0.3s ease-in;
+}
+
+.keypad>div.grey:hover {
+  background: #939393;
 }
 
 .modal {
