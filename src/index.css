@@ -155,6 +155,24 @@ h1 {
   letter-spacing: 1px;
 }
 
+.modal button {
+  background: #5ac85a;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.modal button:hover {
+  background: #4ab84a;
+  transform: scale(1.05);
+}
+
 /* keyframe animations */
 @keyframes flip {
   0% {

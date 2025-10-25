@@ -11,10 +11,16 @@ function App() {
     setSolution(randomSolution.word);
   }, [setSolution]);
 
+  const handleRestart = () => {
+    // Pick a new random solution
+    const randomSolution = data.solutions[Math.floor(Math.random() * data.solutions.length)];
+    setSolution(randomSolution.word);
+  };
+
   return (
     <div className="App">
       <h1>Wordle (Lingo)</h1>
-      {solution && <Wordle solution={solution} />}
+      {solution && <Wordle solution={solution} key={solution} handleRestart={handleRestart} />}
     </div>
   );
 }
